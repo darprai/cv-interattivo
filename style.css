@@ -1,16 +1,31 @@
-body {
+/* Imposta margini e padding a 0 per tutto */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Rende l'intera pagina a schermo pieno e con sfondo verde */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #008000; /* Colore verde */
+    color: #ffffff; /* Colore del testo bianco per visibilità */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    z-index: 10; /* Assicurati che l'header sia sopra il contenuto principale */
 }
 
+/* Menu */
 .menu button {
-    background-color: green;
+    background-color: #004d00; /* Verde scuro per il pulsante */
     color: white;
     padding: 10px;
     border: none;
@@ -18,10 +33,11 @@ header {
     font-size: 18px;
 }
 
+/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: beige;
+    background-color: #f9f9f9;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -37,16 +53,19 @@ header {
     background-color: #ddd;
 }
 
+/* Selector della lingua */
 .language-selector {
     align-self: center;
 }
 
+/* Background */
 .background {
     position: relative;
     width: 100%;
     height: calc(100vh - 100px); /* Altezza dello schermo meno header e footer */
     background-color: beige;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 .background img {
@@ -65,6 +84,7 @@ header {
     background-color: rgba(0, 128, 0, 0.3); /* Overlay verde trasparente */
 }
 
+/* Video Container */
 #video-container {
     position: absolute;
     top: 50%;
@@ -75,11 +95,12 @@ header {
     border-radius: 10px;
 }
 
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: #004d00; /* Verde scuro per il footer */
     color: white;
     padding: 20px;
 }
